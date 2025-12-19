@@ -116,39 +116,180 @@
     </section>
 
     <!-- Galerie -->
-    <section class="section" id="galerie">
+    <section class="gallery-section" id="galerie">
         <div class="section__header reveal">
-            <span class="section__tag">Inspirace</span>
-            <h2 class="section__title">Fotogalerie</h2>
-            <p style="max-width: 800px; margin: 0 auto;">Nahlédněte do našeho ráje.</p>
+            <span class="section__tag">Fotogalerie</span>
+            <h2 class="section__title">Nahlédněte do našeho ráje</h2>
+            <p class="section__subtitle" style="max-width: 800px; margin: 0 auto; color: var(--text-light);">Prohlédněte si, co vás čeká – od soukromého domu přes lagunu až po Beach Club.</p>
         </div>
         <div class="gallery-grid reveal">
-            <div class="gallery-item" onclick="openLightbox(0)">
-                <img src="images/1EF539AF-FB3B-4E4E-915C-359FC7AD0821_4_5005_c.webp" alt="Galerie 1" loading="lazy">
+            <div class="gallery-item"
+                 onclick="openLightbox(0)"
+                 onkeypress="if(event.key==='Enter')openLightbox(0)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Otevřít fotku: Pohled na lagunu při západu slunce">
+                <img src="images/1EF539AF-FB3B-4E4E-915C-359FC7AD0821_4_5005_c.webp" alt="Pohled na lagunu při západu slunce" loading="lazy">
             </div>
-            <div class="gallery-item" onclick="openLightbox(1)">
-                <img src="images/30183067-FDDE-4763-A0D6-D325CAA47C8D_4_5005_c.webp" alt="Galerie 2" loading="lazy">
+            <div class="gallery-item"
+                 onclick="openLightbox(1)"
+                 onkeypress="if(event.key==='Enter')openLightbox(1)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Otevřít fotku: Tropická zahrada s palmami">
+                <img src="images/20F37BD7-E91F-42C6-86EC-2CF1AC8B25C9_1_105_c.webp" alt="Tropická zahrada s palmami" loading="lazy">
             </div>
-            <div class="gallery-item" onclick="openLightbox(2)">
-                <img src="images/4366304F-9E7E-4E1C-90E5-A07F23792F9D_4_5005_c.webp" alt="Galerie 3" loading="lazy">
+            <div class="gallery-item"
+                 onclick="openLightbox(2)"
+                 onkeypress="if(event.key==='Enter')openLightbox(2)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Otevřít fotku: Relaxace v houpací síti">
+                <img src="images/21277724-043D-48B6-B71A-DF0FC7E6A371_1_105_c.webp" alt="Relaxace v houpací síti" loading="lazy">
             </div>
-            <div class="gallery-item" onclick="openLightbox(3)">
-                <img src="images/6829F48B-847A-4990-AEE6-098F5C00F2C2_4_5005_c.webp" alt="Galerie 4" loading="lazy">
+            <div class="gallery-item"
+                 onclick="openLightbox(3)"
+                 onkeypress="if(event.key==='Enter')openLightbox(3)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Otevřít fotku: Prostorný obývací pokoj">
+                <img src="images/30183067-FDDE-4763-A0D6-D325CAA47C8D_4_5005_c.webp" alt="Prostorný obývací pokoj" loading="lazy">
             </div>
-            <div class="gallery-item" onclick="openLightbox(4)">
-                <img src="images/942D829D-8752-494B-BD09-A52E2FA2A113_4_5005_c.webp" alt="Galerie 5" loading="lazy">
+            <div class="gallery-item"
+                 onclick="openLightbox(4)"
+                 onkeypress="if(event.key==='Enter')openLightbox(4)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Otevřít fotku: Čerstvé kokosové ořechy">
+                <img src="images/37E70D0A-CBB4-4897-8EC5-959E9C4C08C8_1_105_c.webp" alt="Čerstvé kokosové ořechy" loading="lazy">
             </div>
-            <div class="gallery-item" onclick="openLightbox(5)">
-                <img src="images/9B7D2B41-C00F-4DD9-8528-82CF09ACFE7B_4_5005_c.webp" alt="Galerie 6" loading="lazy">
+            <div class="gallery-item"
+                 onclick="openLightbox(5)"
+                 onkeypress="if(event.key==='Enter')openLightbox(5)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Otevřít fotku: Moderní kuchyňská linka">
+                <img src="images/4366304F-9E7E-4E1C-90E5-A07F23792F9D_4_5005_c.webp" alt="Moderní kuchyňská linka" loading="lazy">
             </div>
-            <div class="gallery-item" onclick="openLightbox(6)">
-                <img src="images/DDB93ECB-4E5C-43FD-AB98-A7767C984095_4_5005_c.webp" alt="Galerie 7" loading="lazy">
+            <div class="gallery-item"
+                 onclick="openLightbox(6)"
+                 onkeypress="if(event.key==='Enter')openLightbox(6)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Otevřít fotku: Terasa s posezením">
+                <img src="images/55375FCB-1E70-4906-80AB-6C7E15D38D2C_1_105_c.webp" alt="Terasa s posezením" loading="lazy">
             </div>
-            <div class="gallery-item" onclick="openLightbox(7)">
-                <img src="images/F53E8E52-56EE-4001-9DAE-EF78B14EF43C_4_5005_c.webp" alt="Galerie 8" loading="lazy">
+            <div class="gallery-item"
+                 onclick="openLightbox(7)"
+                 onkeypress="if(event.key==='Enter')openLightbox(7)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Otevřít fotku: Pláž Playa Dorada s bílým pískem">
+                <img src="images/6308EFF5-4BF5-4F2F-AA7F-252AADE1F4C2_1_105_c.webp" alt="Pláž Playa Dorada s bílým pískem" loading="lazy">
             </div>
-            <div class="gallery-item" onclick="openLightbox(8)">
-                <img src="images/AF7641AC-B047-41AE-B5F6-F64795ECF069_1_105_c.webp" alt="Galerie 9" loading="lazy">
+            <div class="gallery-item"
+                 onclick="openLightbox(8)"
+                 onkeypress="if(event.key==='Enter')openLightbox(8)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Otevřít fotku: Romantický západ slunce">
+                <img src="images/64A769EC-E9EC-4270-9E3A-338555C339F6_1_105_c.webp" alt="Romantický západ slunce" loading="lazy">
+            </div>
+            <div class="gallery-item"
+                 onclick="openLightbox(9)"
+                 onkeypress="if(event.key==='Enter')openLightbox(9)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Otevřít fotku: Komfortní ložnice">
+                <img src="images/6829F48B-847A-4990-AEE6-098F5C00F2C2_4_5005_c.webp" alt="Komfortní ložnice" loading="lazy">
+            </div>
+            <div class="gallery-item"
+                 onclick="openLightbox(10)"
+                 onkeypress="if(event.key==='Enter')openLightbox(10)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Otevřít fotku: Designová koupelna">
+                <img src="images/90182751-E96D-4E51-B576-4AEB20DAB9D2_1_105_c.webp" alt="Designová koupelna" loading="lazy">
+            </div>
+            <div class="gallery-item"
+                 onclick="openLightbox(11)"
+                 onkeypress="if(event.key==='Enter')openLightbox(11)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Otevřít fotku: Bazén pro dospělé i děti">
+                <img src="images/938265AB-E66A-46B9-A88B-321B70690D4E_1_105_c.webp" alt="Bazén pro dospělé i děti" loading="lazy">
+            </div>
+            <div class="gallery-item"
+                 onclick="openLightbox(12)"
+                 onkeypress="if(event.key==='Enter')openLightbox(12)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Otevřít fotku: Dětské hřiště v resortu">
+                <img src="images/942D829D-8752-494B-BD09-A52E2FA2A113_4_5005_c.webp" alt="Dětské hřiště v resortu" loading="lazy">
+            </div>
+            <div class="gallery-item"
+                 onclick="openLightbox(13)"
+                 onkeypress="if(event.key==='Enter')openLightbox(13)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Otevřít fotku: Panoramatický výhled z balkónu">
+                <img src="images/9B7D2B41-C00F-4DD9-8528-82CF09ACFE7B_4_5005_c.webp" alt="Panoramatický výhled z balkónu" loading="lazy">
+            </div>
+            <div class="gallery-item"
+                 onclick="openLightbox(14)"
+                 onkeypress="if(event.key==='Enter')openLightbox(14)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Otevřít fotku: Kvetoucí exotická flóra">
+                <img src="images/AF7641AC-B047-41AE-B5F6-F64795ECF069_1_105_c.webp" alt="Kvetoucí exotická flóra" loading="lazy">
+            </div>
+            <div class="gallery-item"
+                 onclick="openLightbox(15)"
+                 onkeypress="if(event.key==='Enter')openLightbox(15)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Otevřít fotku: Osobní asistence a služby">
+                <img src="images/BDAE9F59-4565-458B-8BF6-1758201C72C5_1_105_c.webp" alt="Osobní asistence a služby" loading="lazy">
+            </div>
+            <div class="gallery-item"
+                 onclick="openLightbox(16)"
+                 onkeypress="if(event.key==='Enter')openLightbox(16)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Otevřít fotku: Noční atmosféra u laguny">
+                <img src="images/BEC7CA06-B080-4732-8461-A213BCCCA1BB_1_105_c.webp" alt="Noční atmosféra u laguny" loading="lazy">
+            </div>
+            <div class="gallery-item"
+                 onclick="openLightbox(17)"
+                 onkeypress="if(event.key==='Enter')openLightbox(17)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Otevřít fotku: Cesta k pláži lemovaná palmami">
+                <img src="images/C808459F-729F-4FE9-8AE0-4D08761BAE5F_1_105_c.webp" alt="Cesta k pláži lemovaná palmami" loading="lazy">
+            </div>
+            <div class="gallery-item"
+                 onclick="openLightbox(18)"
+                 onkeypress="if(event.key==='Enter')openLightbox(18)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Otevřít fotku: Místní ptactvo v zahradě">
+                <img src="images/CE617BAB-9A76-494B-9340-DDB90C0BEB83_1_105_c.webp" alt="Místní ptactvo v zahradě" loading="lazy">
+            </div>
+            <div class="gallery-item"
+                 onclick="openLightbox(19)"
+                 onkeypress="if(event.key==='Enter')openLightbox(19)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Otevřít fotku: Společenský prostor pro hosty">
+                <img src="images/DDB93ECB-4E5C-43FD-AB98-A7767C984095_4_5005_c.webp" alt="Společenský prostor pro hosty" loading="lazy">
+            </div>
+            <div class="gallery-item"
+                 onclick="openLightbox(20)"
+                 onkeypress="if(event.key==='Enter')openLightbox(20)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Otevřít fotku: Vstup do prázdninového domu">
+                <img src="images/F53E8E52-56EE-4001-9DAE-EF78B14EF43C_4_5005_c.webp" alt="Vstup do prázdninového domu" loading="lazy">
             </div>
         </div>
     </section>
