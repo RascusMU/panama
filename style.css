@@ -339,3 +339,102 @@ footer { background: #042f31; color: white; padding: 100px 8% 50px; text-align: 
         grid-template-columns: 1fr;
     }
 }
+
+/* Dark Theme Variables */
+[data-theme="dark"] {
+    --bg: #0f172a; /* Dark Slate Blue */
+    --text: #f1f5f9; /* Off-white */
+    --text-light: #cbd5e1; /* Light Gray */
+    --border: #334155; /* Dark Border */
+    --shadow-md: 0 20px 50px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 40px 80px rgba(0, 0, 0, 0.6);
+
+    /* Preserve brand colors but maybe adjust brightness if needed */
+    /* --primary is dark teal, might need to be lighter or kept as accent against dark bg.
+       Actually #065f64 is quite dark. On dark bg it might have low contrast.
+       Let's brighten it slightly for dark mode or use it as background for badges.
+       For text, we might need a lighter shade. */
+}
+
+/* Specific Dark Mode Overrides */
+[data-theme="dark"] .gallery-section {
+    background: #0b1120; /* Darker than main bg */
+}
+
+[data-theme="dark"] .card,
+[data-theme="dark"] .master-plan-box,
+[data-theme="dark"] .section[style*="background-color: #fff"] {
+    background: #1e293b !important; /* Card background */
+    border-color: var(--border);
+}
+
+[data-theme="dark"] .nav--scrolled {
+    background: rgba(15, 23, 42, 0.95);
+}
+
+[data-theme="dark"] .section__title,
+[data-theme="dark"] .split__title,
+[data-theme="dark"] .card__title,
+[data-theme="dark"] .modal__title {
+    color: #5eead4; /* Lighter Teal/Cyan for headers in dark mode */
+}
+
+[data-theme="dark"] .modal__content {
+    background: #1e293b;
+    color: var(--text);
+}
+
+[data-theme="dark"] .modal__close {
+    background: #334155;
+    color: white;
+}
+
+[data-theme="dark"] .tag {
+    background: #334155;
+    color: #5eead4;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    background: transparent;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    color: white;
+    margin-right: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav--scrolled .theme-toggle {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+[data-theme="dark"] .nav--scrolled .theme-toggle {
+    border-color: #5eead4;
+    color: #5eead4;
+}
+
+.theme-toggle:hover {
+    transform: rotate(15deg);
+    background: rgba(255,255,255,0.1);
+}
+
+.theme-toggle svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+/* Sun/Moon Animation Icons */
+.icon-moon { display: none; }
+[data-theme="dark"] .icon-sun { display: none; }
+[data-theme="dark"] .icon-moon { display: block; }

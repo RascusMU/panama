@@ -124,3 +124,24 @@ document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowRight') nextImage();
     if (e.key === 'ArrowLeft') prevImage();
 });
+
+// === Dark Mode Logic ===
+const themeToggle = document.getElementById('theme-toggle');
+const html = document.documentElement;
+
+// 1. Check local storage or system preference
+const storedTheme = localStorage.getItem('theme');
+const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+if (storedTheme === 'dark' || (!storedTheme && systemPrefersDark)) {
+    html.setAttribute('data-theme', 'dark');
+}
+
+// 2. Toggle function
+themeToggle.addEventListener('click', () => {
+    const currentTheme = html.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+    html.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+});
