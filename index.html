@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Panama Authentic Stay - Exkluzivní prázdninové ubytování v resortu PH Playa Dorada. Zažijte Karibik v soukromí s českým servisem.">
+    <meta name="author" content="Panama Authentic Stay">
+    
+    <!-- Open Graph pro sociální sítě -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Panama Authentic Stay | Vaše snová dovolená v Panamě">
+    <meta property="og:description" content="Pronájem soukromého domu přímo na pláži. Laguna, Beach Club a výlety po Panamě.">
+    <meta property="og:image" content="https://www.playadorada.com.pa/wp-content/uploads/2024/01/DJI_0906.jpg">
+    
+    <title>Panama Authentic Stay | Dovolená v Karibském Ráji</title>
+    
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌴</text></svg>">
+    
+    <!-- Moderní Google Fonty -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #065f64; /* Hluboká mořská tyrkysová */
+            --accent: #ff7f50; /* Korálová pro CTA */
+            --sun: #ffcf4b; /* Sluneční žlutá */
+            --bg: #fffcf7; /* Jemně pískové pozadí */
+            --text: #2c3e50;
+            --text-light: #576574;
+            --border: #f3ede2;
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --shadow-md: 0 20px 50px rgba(6, 95, 100, 0.1);
+            --shadow-lg: 0 40px 80px rgba(6, 95, 100, 0.15);
+            --radius-md: 25px;
+            --radius-lg: 50px;
+        }
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; color: var(--text); background: var(--bg); overflow-x: hidden; line-height: 1.7; }
+        img { max-width: 100%; height: auto; display: block; }
+        a { text-decoration: none; color: inherit; }
+
+        /* Navigace */
+        .nav {
+            position: fixed; top: 0; width: 100%; z-index: 1000;
+            padding: 25px 5%; display: flex; justify-content: space-between; align-items: center;
+            transition: var(--transition);
+        }
+        .nav--scrolled {
+            background: rgba(255, 252, 247, 0.95);
+            backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+            padding: 15px 5%; box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+        }
+        .nav__logo { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 700; color: white; display: flex; align-items: center; gap: 10px; }
+        .nav--scrolled .nav__logo { color: var(--primary); }
+
+        /* Tlačítka */
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center;
+            padding: 18px 45px; border-radius: var(--radius-md); font-weight: 800;
+            font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1px;
+            transition: var(--transition); cursor: pointer; border: none;
+        }
+        .btn--primary { background: var(--accent); color: white; box-shadow: 0 10px 25px rgba(255, 127, 80, 0.4); }
+        .btn--primary:hover { transform: translateY(-3px); background: #ff6b3d; box-shadow: 0 15px 30px rgba(255, 127, 80, 0.5); }
+        .btn--outline { background: transparent; border: 2px solid white; color: white; }
+        .btn--outline:hover { background: white; color: var(--primary); }
+
+        /* Hero Sekce */
+        .hero {
+            height: 100vh; position: relative; display: flex; align-items: center; justify-content: center; text-align: center; color: white; overflow: hidden;
+        }
+        .hero__bg {
+            position: absolute; inset: 0;
+            background: linear-gradient(rgba(6, 95, 100, 0.4), rgba(0,0,0,0.2)),
+                        url('https://www.playadorada.com.pa/wp-content/uploads/2024/01/DJI_0906.jpg') center/cover no-repeat;
+            z-index: -1; transform: scale(1.1); transition: transform 0.5s ease-out;
+        }
+        .hero__content { max-width: 900px; padding: 0 20px; }
+        .hero__tag { font-weight: 800; text-transform: uppercase; letter-spacing: 6px; margin-bottom: 20px; display: block; color: var(--sun); }
+        .hero__title { font-family: 'Playfair Display', serif; font-size: clamp(3rem, 10vw, 5.5rem); margin-bottom: 25px; line-height: 1.1; }
+        .hero__subtitle { font-size: 1.3rem; margin-bottom: 40px; font-weight: 300; max-width: 700px; margin-inline: auto; }
+        
+        /* Animace odkrývání */
+        .reveal { opacity: 0; transform: translateY(30px); transition: var(--transition); }
+        .reveal--active { opacity: 1; transform: translateY(0); }
+
+        /* Sekce - obecné */
+        .section { padding: 120px 8%; position: relative; }
+        .section__header { text-align: center; margin-bottom: 70px; }
+        .section__tag { color: var(--accent); font-weight: 800; text-transform: uppercase; letter-spacing: 4px; font-size: 0.85rem; display: block; margin-bottom: 10px; }
+        .section__title { font-family: 'Playfair Display', serif; font-size: clamp(2.2rem, 5vw, 3.5rem); color: var(--primary); }
+
+        /* Karty prázdninových zážitků */
+        .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; }
+        .card {
+            background: white; padding: 50px 40px; border-radius: var(--radius-lg); transition: var(--transition);
+            border: 1px solid var(--border); text-align: center; box-shadow: var(--shadow-md); cursor: pointer; overflow: hidden; position: relative;
+        }
+        .card::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 5px; background: linear-gradient(90deg, var(--accent), var(--sun)); opacity: 0; transition: var(--transition); }
+        .card:hover { transform: translateY(-15px); box-shadow: var(--shadow-lg); }
+        .card:hover::before { opacity: 1; }
+        .card__icon { font-size: 3.5rem; margin-bottom: 25px; display: block; }
+        .card__title { font-size: 1.6rem; margin-bottom: 15px; color: var(--primary); }
+        .card__text { color: var(--text-light); }
+
+        /* Feature Sekce (Rozdělená) */
+        .split { display: flex; gap: 80px; align-items: center; }
+        .split__visual { flex: 1.2; position: relative; }
+        .split__image { width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); }
+        .split__badge {
+            position: absolute; bottom: -20px; right: -20px; background: var(--primary); color: white;
+            padding: 35px; border-radius: var(--radius-md); max-width: 280px; box-shadow: 0 20px 40px rgba(6, 95, 100, 0.3);
+        }
+        .split__info { flex: 1; }
+        .split__title { font-family: 'Playfair Display', serif; font-size: 2.8rem; color: var(--primary); margin-bottom: 25px; }
+        
+        /* Tagy / Štítky */
+        .tag-cloud { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+        .tag { background: #eef7f7; color: var(--primary); padding: 10px 22px; border-radius: 50px; font-weight: 700; font-size: 0.85rem; transition: var(--transition); }
+        .tag:hover { background: var(--primary); color: white; }
+
+        /* Počasí Box */
+        .weather-box {
+            background: linear-gradient(135deg, var(--primary), #0a3d40); border-radius: var(--radius-lg);
+            padding: 60px; color: white; display: flex; gap: 40px; box-shadow: var(--shadow-lg);
+        }
+        .weather-item { flex: 1; }
+        .weather-item h4 { color: var(--sun); font-size: 1.5rem; margin-bottom: 15px; }
+
+        /* Modální okna (Tropical Modern) */
+        .modal {
+            display: none; position: fixed; z-index: 9999; inset: 0; background: rgba(6, 95, 100, 0.95);
+            backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); padding: 20px; overflow-y: auto;
+        }
+        .modal--active { display: flex; align-items: flex-start; justify-content: center; }
+        .modal__content {
+            background: var(--bg); width: 100%; max-width: 1000px; border-radius: var(--radius-lg);
+            overflow: hidden; position: relative; box-shadow: 0 50px 100px rgba(0,0,0,0.5); margin: 40px 0;
+        }
+        .modal__close {
+            position: absolute; top: 25px; right: 30px; font-size: 2.5rem; cursor: pointer;
+            color: var(--primary); z-index: 100; background: white; width: 50px; height: 50px;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center; border: none;
+        }
+        .modal__grid { display: grid; grid-template-columns: 1fr 1.2fr; }
+        .modal__image { width: 100%; height: 100%; object-fit: cover; min-height: 500px; }
+        .modal__details { padding: 60px; }
+        .modal__title { font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--primary); margin-bottom: 20px; }
+        .modal__list { list-style: none; margin-top: 20px; }
+        .modal__list li { margin-bottom: 12px; display: flex; gap: 10px; align-items: flex-start; }
+        .modal__list li::before { content: "✓"; color: var(--accent); font-weight: bold; }
+
+        /* Master Plan sekce */
+        .master-plan-box { background: white; padding: 20px; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); margin-top: 40px; }
+
+        /* WhatsApp Plovoucí tlačítko */
+        .wa-float { position: fixed; bottom: 35px; right: 35px; z-index: 9000; display: flex; align-items: center; gap: 15px; }
+        .wa-btn {
+            width: 75px; height: 75px; background: #25d366; border-radius: 25px;
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 15px 35px rgba(37, 211, 102, 0.4); transition: var(--transition);
+        }
+        .wa-btn:hover { transform: scale(1.1) rotate(-8deg); }
+        .wa-btn svg { width: 40px; height: 40px; fill: white; }
+
+        /* Footer */
+        footer { background: #042f31; color: white; padding: 100px 8% 50px; text-align: center; }
+        .footer__logo { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 20px; display: block; }
+        
+        @media (max-width: 900px) {
+            .split { flex-direction: column; gap: 50px; }
+            .modal__grid { grid-template-columns: 1fr; }
+            .modal__image { min-height: 250px; }
+            .modal__details { padding: 40px 25px; }
+            .weather-box { flex-direction: column; padding: 40px 30px; }
+            .hero__title { font-size: 2.8rem; }
+            .section { padding: 80px 5%; }
+            .mobile-hide { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigace -->
+    <nav class="nav" id="navbar">
+        <a href="#" class="nav__logo">🌴 Panama Authentic</a>
+        <a href="https://wa.me/420775710301" class="btn btn--primary" style="padding: 12px 25px; font-size: 0.8rem;">REZERVOVAT DOVOLENOU</a>
+    </nav>
+
+    <!-- Hero Sekce -->
+    <section class="hero">
+        <div class="hero__bg" id="hero-bg"></div>
+        <div class="hero__content">
+            <span class="hero__tag">Dovolená přímo na pláži Pacifiku</span>
+            <h1 class="hero__title">Objevte Ráj v Playa Dorada</h1>
+            <p class="hero__subtitle">Pronájem luxusního soukromého domu v prestižním resortu. 1 km vlastní pláže, unikátní laguna a český servis jen 30 minut od Panama City.</p>
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <a href="#nabidka" class="btn btn--primary">Nabídka ubytování</a>
+                <a href="#lokalita" class="btn btn--outline">Resort a laguna</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hlavní pilíře nabídky -->
+    <section class="section" id="nabidka">
+        <div class="section__header reveal">
+            <span class="section__tag">Proč si u nás užijete prázdniny?</span>
+            <h2 class="section__title">Víc než jen pronájem domu</h2>
+        </div>
+        <div class="cards-grid">
+            <article class="card reveal" onclick="openModal('modal-villa')">
+                <span class="card__icon">🏘️</span>
+                <h3 class="card__title">Váš Prázdninový Dům</h3>
+                <p class="card__text">Plně vybavený dům v hlídané komunitě. Soukromá terasa, grill a bezpečí pro vaši rodinu po celou dobu pobytu.</p>
+                <span style="color:var(--accent); font-weight:800; display:block; margin-top:20px;">VYBAVENÍ DOMU &rarr;</span>
+            </article>
+            <article class="card reveal" onclick="openModal('modal-service')">
+                <span class="card__icon">🚐</span>
+                <h3 class="card__title">Bezstarostný Servis</h3>
+                <p class="card__text">Letištní transfer, český řidič na výlety a zajištění SIM karty. Vy si jen užíváte, my řešíme detaily.</p>
+                <span style="color:var(--accent); font-weight:800; display:block; margin-top:20px;">NAŠE SLUŽBY &rarr;</span>
+            </article>
+            <article class="card reveal" onclick="openModal('modal-tours')">
+                <span class="card__icon">🛶</span>
+                <h3 class="card__title">Soukromé Výlety</h3>
+                <p class="card__text">Expedice na San Blas, k Průplavu nebo do džungle. Poznáte Panamu autenticky a bezpečně.</p>
+                <span style="color:var(--accent); font-weight:800; display:block; margin-top:20px;">PLÁN VÝLETŮ &rarr;</span>
+            </article>
+        </div>
+    </section>
+
+    <!-- Resort a Lokalita -->
+    <section class="section" id="lokalita" style="background-color: #fff;">
+        <div class="split">
+            <div class="split__visual reveal">
+                <img src="https://www.playadorada.com.pa/wp-content/uploads/2019/10/Club-de-Playa-scaled.jpg" alt="Beach Club Playa Dorada" class="split__image">
+                <div class="split__badge">
+                    <h4 style="font-size:1.5rem; margin-bottom:10px; color:var(--sun);">Slaná Laguna</h4>
+                    <p style="font-size:0.9rem; opacity:0.9;">Unikátní laguna s bílým pískem a Beach Club s restaurací jen pár kroků od domu.</p>
+                </div>
+            </div>
+            <div class="split__info reveal">
+                <span class="section__tag" style="text-align:left;">Resort Playa Dorada</span>
+                <h2 class="split__title">Sport, Relax a Karibská pohoda</h2>
+                <p style="color:var(--text-light); font-size:1.1rem; margin-bottom:30px;">V areálu najdete špičkové zázemí pro aktivní dovolenou i zasloužený odpočinek pod palmami.</p>
+                <div class="tag-cloud">
+                    <span class="tag">🍹 Beach Club & Bar</span>
+                    <span class="tag">🌊 Laguna se slanou vodou</span>
+                    <span class="tag">🎢 Aquapark s tobogány</span>
+                    <span class="tag">🎾 Tenisové kurty</span>
+                    <span class="tag">⚽ Fotbalové hřiště</span>
+                    <span class="tag">🚴 Cyklostezky</span>
+                    <span class="tag">🍕 Pizzerie v areálu</span>
+                </div>
+                <div style="margin-top:40px;">
+                    <a href="https://wa.me/420775710301" class="btn btn--primary">MÁM ZÁJEM O POBYT</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mapa areálu (Z PlayaDorada.com.pa) -->
+    <section class="section">
+        <div class="section__header reveal">
+            <span class="section__tag">Kde budete trávit čas?</span>
+            <h2 class="section__title">Master Plan Resortu</h2>
+            <p style="max-width: 800px; margin: 0 auto;">Prohlédněte si rozvržení celého areálu. Od moře, laguny a sportovišť vás dělí jen krátká procházka tropickou zahradou.</p>
+        </div>
+        <div class="master-plan-box reveal">
+            <img src="https://www.playadorada.com.pa/wp-content/uploads/2019/11/playa-dorada-panama_04.jpg" alt="Mapa areálu Playa Dorada" style="width:100%; border-radius:30px;">
+        </div>
+    </section>
+
+    <!-- Počasí a sezóny -->
+    <section class="section" style="background-color: #fff;">
+        <div class="section__header reveal">
+            <span class="section__tag">Naplánujte si termín</span>
+            <h2 class="section__title">Léto, které nekončí</h2>
+        </div>
+        <div class="weather-box reveal">
+            <div class="weather-item">
+                <h4>☀️ Hlavní sezóna (Leden - Duben)</h4>
+                <p>Nekonečné slunce a modré nebe. Ideální čas pro únik z evropské zimy na rajské pláže Karibiku i Pacifiku.</p>
+            </div>
+            <div style="width:2px; background:rgba(255,255,255,0.1);" class="mobile-hide"></div>
+            <div class="weather-item">
+                <h4>🌿 Zelená sezóna (Květen - Prosinec)</h4>
+                <p>Příroda je nejkrásnější, vše kvete. Prší jen krátce a osvěžujícím způsobem, teploty zůstávají tropické.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <span class="footer__logo">🌴 Panama Authentic Stay</span>
+        <p style="max-width:600px; margin:0 auto 40px; opacity:0.7;">Váš český průvodce a hostitel v Panamě. Zajišťujeme ubytování a nezapomenutelné zážitky s důrazem na autenticitu.</p>
+        <div style="margin-bottom:40px;">
+            <p style="font-weight:800; font-size:1.2rem; color:var(--sun);">+420 775 710 301</p>
+            <p>PH Residential Playa Dorada, Vacamonte, Panama</p>
+        </div>
+        <p style="opacity:0.3; font-size:0.8rem;">&copy; 2025 Panama Authentic Stay. Všechna práva vyhrazena.</p>
+    </footer>
+
+    <!-- Modální okna -->
+    <div id="modal-villa" class="modal">
+        <div class="modal__content">
+            <button class="modal__close" onclick="closeModal('modal-villa')">&times;</button>
+            <div class="modal__grid">
+                <img src="https://www.playadorada.com.pa/wp-content/uploads/2019/10/Imagen-aspiracional-scaled.jpg" class="modal__image" alt="Dům pro dovolenou">
+                <div class="modal__details">
+                    <h2 class="modal__title">Ubytování v Soukromí</h2>
+                    <p>Pronajměte si náš dům a užijte si svobodu, kterou hotel nenabízí. Klid, soukromí a veškerý komfort pro vaši rodinu.</p>
+                    <ul class="modal__list">
+                        <li>3 klimatizované ložnice a moderní kuchyně</li>
+                        <li>Vysokorychlostní WiFi pro digitální nomády</li>
+                        <li>Vstupy do celého resortu (laguna, bazény) v ceně</li>
+                        <li>Hlídaný areál 24/7 (maximální bezpečí)</li>
+                        <li>Nákupní centra Westland a Extra jen 5 min od areálu</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-service" class="modal">
+        <div class="modal__content">
+            <button class="modal__close" onclick="closeModal('modal-service')">&times;</button>
+            <div class="modal__grid">
+                <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=1000&q=80" class="modal__image" alt="Dovolenkové služby">
+                <div class="modal__details">
+                    <h2 class="modal__title">Kompletní Servis</h2>
+                    <p>Nechceme, abyste řešili logistiku. Chceme, abyste si užívali dovolenou od první minuty.</p>
+                    <ul class="modal__list">
+                        <li><strong>Letištní transfer:</strong> Osobní vyzvednutí na letišti Tocumen.</li>
+                        <li><strong>Řidič:</strong> Služby osobního řidiče na nákupy nebo specifické cesty.</li>
+                        <li><strong>SIM Karta:</strong> Předáme vám aktivovanou SIM kartu s daty hned po příletu.</li>
+                        <li><strong>Konektivita:</strong> Stálá asistence přes WhatsApp v češtině.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-tours" class="modal">
+        <div class="modal__content">
+            <button class="modal__close" onclick="closeModal('modal-tours')">&times;</button>
+            <div class="modal__grid">
+                <img src="https://www.playadorada.com.pa/wp-content/uploads/2019/10/playa-dorada_vista-family.jpg" class="modal__image" alt="Výlety v Panamě">
+                <div class="modal__details">
+                    <h2 class="modal__title">Soukromé Expedice</h2>
+                    <p>Ukážeme vám to nejlepší z Panamy bez turistických davů:</p>
+                    <ul class="modal__list" style="margin-top: 20px;">
+                        <li><strong>San Blas:</strong> Soukromá cesta na karibské ostrovy indiánů Guna.</li>
+                        <li><strong>Panamský Průplav:</strong> Zdymadla Miraflores a staré město Casco Viejo.</li>
+                        <li><strong>El Valle de Antón:</strong> Výšlap v kráteru sopky a návštěva trhů.</li>
+                        <li><strong>Isla Taboga:</strong> Celodenní relax na "Ostrově květin" kousek lodí.</li>
+                    </ul>
+                    <a href="https://wa.me/420775710301" class="btn btn--primary" style="margin-top:20px;">CHCI NAPLÁNOVAT VÝLET</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WhatsApp Plovoucí tlačítko -->
+    <div class="wa-float">
+        <div style="background:white; padding:10px 20px; border-radius:15px; box-shadow:0 10px 20px rgba(0,0,0,0.1); font-weight:800; color:var(--primary);">Pojďme plánovat dovolenou! 🥥</div>
+        <a href="https://wa.me/420775710301" class="wa-btn" target="_blank">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+    </div>
+
+    <script>
+        // Logika pro navigaci a animace odkrývání
+        window.onscroll = function() {
+            const nav = document.getElementById('navbar');
+            const heroBg = document.getElementById('hero-bg');
+            const y = window.pageYOffset;
+            
+            if (y > 50) nav.classList.add('nav--scrolled');
+            else nav.classList.remove('nav--scrolled');
+
+            heroBg.style.transform = `scale(1.1) translateY(${y * 0.3}px)`;
+
+            document.querySelectorAll('.reveal').forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 100) el.classList.add('reveal--active');
+            });
+        };
+
+        // Funkce pro modální okna
+        function openModal(id) {
+            const m = document.getElementById(id);
+            m.style.display = 'flex';
+            setTimeout(() => m.classList.add('modal--active'), 10);
+            document.body.style.overflow = 'hidden';
+        }
+        function closeModal(id) {
+            const m = document.getElementById(id);
+            m.classList.remove('modal--active');
+            setTimeout(() => m.style.display = 'none', 400);
+            document.body.style.overflow = 'auto';
+        }
+
+        // Zavření okna kliknutím mimo obsah
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                closeModal(event.target.id);
+            }
+        }
+    </script>
+</body>
+</html>
