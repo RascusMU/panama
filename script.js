@@ -145,3 +145,30 @@ themeToggle.addEventListener('click', () => {
     html.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
 });
+
+// === Load More Gallery Items ===
+const loadMoreBtn = document.getElementById('load-more-btn');
+
+if (loadMoreBtn) {
+    loadMoreBtn.addEventListener('click', () => {
+        const hiddenItems = document.querySelectorAll('.hidden-gallery-item');
+
+        hiddenItems.forEach((item, index) => {
+            // Slight stagger effect for better UX
+            setTimeout(() => {
+                item.classList.remove('hidden-gallery-item');
+                item.classList.add('reveal', 'reveal--active'); // Add animation classes if compatible
+            }, index * 50);
+        });
+
+        // Hide button after loading
+        loadMoreBtn.style.display = 'none';
+
+        // Move focus to the first newly revealed item for accessibility
+        if (hiddenItems.length > 0) {
+            setTimeout(() => {
+                hiddenItems[0].focus();
+            }, 100);
+        }
+    });
+}

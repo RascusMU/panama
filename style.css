@@ -222,6 +222,11 @@ footer { background: #042f31; color: white; padding: 100px 8% 50px; text-align: 
     opacity: 1;
 }
 
+/* Hidden Gallery Items */
+.hidden-gallery-item {
+    display: none;
+}
+
 /* Lightbox (Premium Modal) */
 .lightbox {
     position: fixed;
