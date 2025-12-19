@@ -115,6 +115,44 @@
         </div>
     </section>
 
+    <!-- Galerie -->
+    <section class="section" id="galerie">
+        <div class="section__header reveal">
+            <span class="section__tag">Inspirace</span>
+            <h2 class="section__title">Fotogalerie</h2>
+            <p style="max-width: 800px; margin: 0 auto;">Nahlédněte do našeho ráje.</p>
+        </div>
+        <div class="gallery-grid reveal">
+            <div class="gallery-item" onclick="openLightbox(0)">
+                <img src="images/1EF539AF-FB3B-4E4E-915C-359FC7AD0821_4_5005_c.webp" alt="Galerie 1" loading="lazy">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(1)">
+                <img src="images/30183067-FDDE-4763-A0D6-D325CAA47C8D_4_5005_c.webp" alt="Galerie 2" loading="lazy">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(2)">
+                <img src="images/4366304F-9E7E-4E1C-90E5-A07F23792F9D_4_5005_c.webp" alt="Galerie 3" loading="lazy">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(3)">
+                <img src="images/6829F48B-847A-4990-AEE6-098F5C00F2C2_4_5005_c.webp" alt="Galerie 4" loading="lazy">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(4)">
+                <img src="images/942D829D-8752-494B-BD09-A52E2FA2A113_4_5005_c.webp" alt="Galerie 5" loading="lazy">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(5)">
+                <img src="images/9B7D2B41-C00F-4DD9-8528-82CF09ACFE7B_4_5005_c.webp" alt="Galerie 6" loading="lazy">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(6)">
+                <img src="images/DDB93ECB-4E5C-43FD-AB98-A7767C984095_4_5005_c.webp" alt="Galerie 7" loading="lazy">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(7)">
+                <img src="images/F53E8E52-56EE-4001-9DAE-EF78B14EF43C_4_5005_c.webp" alt="Galerie 8" loading="lazy">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(8)">
+                <img src="images/AF7641AC-B047-41AE-B5F6-F64795ECF069_1_105_c.webp" alt="Galerie 9" loading="lazy">
+            </div>
+        </div>
+    </section>
+
     <!-- Počasí a sezóny -->
     <section class="section" style="background-color: #fff;">
         <div class="section__header reveal">
@@ -170,7 +208,7 @@
         <div class="modal__content">
             <button class="modal__close" onclick="closeModal('modal-service')">&times;</button>
             <div class="modal__grid">
-                <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=1000&q=80" class="modal__image" alt="Dovolenkové služby" loading="lazy">
+                <img src="images/BDAE9F59-4565-458B-8BF6-1758201C72C5_1_105_c.webp" class="modal__image" alt="Dovolenkové služby" loading="lazy">
                 <div class="modal__details">
                     <h2 class="modal__title">Kompletní Servis</h2>
                     <p>Nechceme, abyste řešili logistiku. Chceme, abyste si užívali dovolenou od první minuty.</p>
@@ -203,6 +241,16 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <!-- Lightbox Gallery Modal -->
+    <div id="lightbox" class="lightbox" role="dialog" aria-label="Galerie" aria-modal="true" tabindex="-1">
+        <button class="lightbox__close" aria-label="Zavřít">&times;</button>
+        <button class="lightbox__nav lightbox__nav--prev" aria-label="Předchozí">&lt;</button>
+        <div class="lightbox__content">
+            <img id="lightbox-img" src="" alt="Detail" loading="eager">
+        </div>
+        <button class="lightbox__nav lightbox__nav--next" aria-label="Další">&gt;</button>
     </div>
 
     <!-- WhatsApp Plovoucí tlačítko -->
