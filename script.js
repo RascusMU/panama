@@ -37,28 +37,29 @@ window.onclick = function(event) {
 }
 
 // === Lightbox / Galerie ===
+const imgPrefix = window.imgPrefix || '';
 const galleryImages = [
-    "images/1EF539AF-FB3B-4E4E-915C-359FC7AD0821_4_5005_c.webp",
-    "images/20F37BD7-E91F-42C6-86EC-2CF1AC8B25C9_1_105_c.webp",
-    "images/21277724-043D-48B6-B71A-DF0FC7E6A371_1_105_c.webp",
-    "images/30183067-FDDE-4763-A0D6-D325CAA47C8D_4_5005_c.webp",
-    "images/37E70D0A-CBB4-4897-8EC5-959E9C4C08C8_1_105_c.webp",
-    "images/4366304F-9E7E-4E1C-90E5-A07F23792F9D_4_5005_c.webp",
-    "images/55375FCB-1E70-4906-80AB-6C7E15D38D2C_1_105_c.webp",
-    "images/6308EFF5-4BF5-4F2F-AA7F-252AADE1F4C2_1_105_c.webp",
-    "images/64A769EC-E9EC-4270-9E3A-338555C339F6_1_105_c.webp",
-    "images/6829F48B-847A-4990-AEE6-098F5C00F2C2_4_5005_c.webp",
-    "images/90182751-E96D-4E51-B576-4AEB20DAB9D2_1_105_c.webp",
-    "images/938265AB-E66A-46B9-A88B-321B70690D4E_1_105_c.webp",
-    "images/942D829D-8752-494B-BD09-A52E2FA2A113_4_5005_c.webp",
-    "images/9B7D2B41-C00F-4DD9-8528-82CF09ACFE7B_4_5005_c.webp",
-    "images/AF7641AC-B047-41AE-B5F6-F64795ECF069_1_105_c.webp",
-    "images/BDAE9F59-4565-458B-8BF6-1758201C72C5_1_105_c.webp",
-    "images/BEC7CA06-B080-4732-8461-A213BCCCA1BB_1_105_c.webp",
-    "images/C808459F-729F-4FE9-8AE0-4D08761BAE5F_1_105_c.webp",
-    "images/CE617BAB-9A76-494B-9340-DDB90C0BEB83_1_105_c.webp",
-    "images/DDB93ECB-4E5C-43FD-AB98-A7767C984095_4_5005_c.webp",
-    "images/F53E8E52-56EE-4001-9DAE-EF78B14EF43C_4_5005_c.webp"
+    imgPrefix + "images/1EF539AF-FB3B-4E4E-915C-359FC7AD0821_4_5005_c.webp",
+    imgPrefix + "images/20F37BD7-E91F-42C6-86EC-2CF1AC8B25C9_1_105_c.webp",
+    imgPrefix + "images/21277724-043D-48B6-B71A-DF0FC7E6A371_1_105_c.webp",
+    imgPrefix + "images/30183067-FDDE-4763-A0D6-D325CAA47C8D_4_5005_c.webp",
+    imgPrefix + "images/37E70D0A-CBB4-4897-8EC5-959E9C4C08C8_1_105_c.webp",
+    imgPrefix + "images/4366304F-9E7E-4E1C-90E5-A07F23792F9D_4_5005_c.webp",
+    imgPrefix + "images/55375FCB-1E70-4906-80AB-6C7E15D38D2C_1_105_c.webp",
+    imgPrefix + "images/6308EFF5-4BF5-4F2F-AA7F-252AADE1F4C2_1_105_c.webp",
+    imgPrefix + "images/64A769EC-E9EC-4270-9E3A-338555C339F6_1_105_c.webp",
+    imgPrefix + "images/6829F48B-847A-4990-AEE6-098F5C00F2C2_4_5005_c.webp",
+    imgPrefix + "images/90182751-E96D-4E51-B576-4AEB20DAB9D2_1_105_c.webp",
+    imgPrefix + "images/938265AB-E66A-46B9-A88B-321B70690D4E_1_105_c.webp",
+    imgPrefix + "images/942D829D-8752-494B-BD09-A52E2FA2A113_4_5005_c.webp",
+    imgPrefix + "images/9B7D2B41-C00F-4DD9-8528-82CF09ACFE7B_4_5005_c.webp",
+    imgPrefix + "images/AF7641AC-B047-41AE-B5F6-F64795ECF069_1_105_c.webp",
+    imgPrefix + "images/BDAE9F59-4565-458B-8BF6-1758201C72C5_1_105_c.webp",
+    imgPrefix + "images/BEC7CA06-B080-4732-8461-A213BCCCA1BB_1_105_c.webp",
+    imgPrefix + "images/C808459F-729F-4FE9-8AE0-4D08761BAE5F_1_105_c.webp",
+    imgPrefix + "images/CE617BAB-9A76-494B-9340-DDB90C0BEB83_1_105_c.webp",
+    imgPrefix + "images/DDB93ECB-4E5C-43FD-AB98-A7767C984095_4_5005_c.webp",
+    imgPrefix + "images/F53E8E52-56EE-4001-9DAE-EF78B14EF43C_4_5005_c.webp"
 ];
 
 let currentImageIndex = 0;

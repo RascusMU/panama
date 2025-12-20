@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Panama Authentic Stay - Эксклюзивное жилье для отдыха на курорте PH Playa Dorada. Насладитесь Карибами в уединении с европейским сервисом.">
+    <meta name="author" content="Panama Authentic Stay">
+
+    <!-- Open Graph для социальных сетей -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Panama Authentic Stay | Ваш отпуск мечты в Панаме">
+    <meta property="og:description" content="Аренда частного дома прямо на пляже. Лагуна, пляжный клуб и экскурсии по Панаме.">
+    <meta property="og:image" content="https://www.playadorada.com.pa/wp-content/uploads/2024/01/DJI_0906.jpg">
+
+    <title>Panama Authentic Stay | Отдых в Карибском раю</title>
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌴</text></svg>">
+
+    <!-- Современные шрифты Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <!-- Навигация -->
+    <nav class="nav" id="navbar">
+        <a href="#" class="nav__logo">🌴 Panama Authentic</a>
+        <a href="https://wa.me/420775710301" class="btn btn--primary" style="padding: 12px 25px; font-size: 0.8rem;">ЗАБРОНИРОВАТЬ ОТДЫХ</a>
+    </nav>
+
+    <!-- Hero Секция -->
+    <section class="hero">
+        <div class="hero__bg" id="hero-bg"></div>
+        <div class="hero__content">
+            <span class="hero__tag">Отдых прямо на берегу Тихого океана</span>
+            <h1 class="hero__title">Откройте для себя рай в Playa Dorada</h1>
+            <p class="hero__subtitle">Аренда семейного частного дома на престижном курорте. 1 км частного пляжа, уникальная лагуна и чешский сервис всего в 30 минутах от Панама-Сити.</p>
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <a href="#nabidka" class="btn btn--primary">Предложение жилья</a>
+                <a href="#lokalita" class="btn btn--outline">Курорт и лагуна</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Главные преимущества -->
+    <section class="section" id="nabidka">
+        <div class="section__header reveal">
+            <span class="section__tag">Почему стоит отдыхать у нас?</span>
+            <h2 class="section__title">Больше, чем просто аренда дома</h2>
+        </div>
+        <div class="cards-grid">
+            <article class="card reveal" onclick="openModal('modal-villa')">
+                <span class="card__icon">🏘️</span>
+                <h3 class="card__title">Ваш дом для отдыха</h3>
+                <p class="card__text">Полностью оборудованный дом в охраняемом комплексе. Частная терраса, гриль и безопасность для вашей семьи на протяжении всего пребывания.</p>
+                <span style="color:var(--accent); font-weight:800; display:block; margin-top:20px;">ОСНАЩЕНИЕ ДОМА &rarr;</span>
+            </article>
+            <article class="card reveal" onclick="openModal('modal-service')">
+                <span class="card__icon">🚐</span>
+                <h3 class="card__title">Беззаботный сервис</h3>
+                <p class="card__text">Трансфер из аэропорта, личный водитель для поездок и оформление SIM-карты. Вы просто наслаждаетесь, мы решаем детали.</p>
+                <span style="color:var(--accent); font-weight:800; display:block; margin-top:20px;">НАШИ УСЛУГИ &rarr;</span>
+            </article>
+            <article class="card reveal" onclick="openModal('modal-tours')">
+                <span class="card__icon">🛶</span>
+                <h3 class="card__title">Частные экскурсии</h3>
+                <p class="card__text">Экспедиции на Сан-Блас, к Каналу или в джунгли. Вы узнаете Панаму аутентично и безопасно.</p>
+                <span style="color:var(--accent); font-weight:800; display:block; margin-top:20px;">ПЛАН ЭКСКУРСИЙ &rarr;</span>
+            </article>
+        </div>
+    </section>
+
+    <!-- Курорт и Расположение -->
+    <section class="section" id="lokalita" style="background-color: #fff;">
+        <div class="split">
+            <div class="split__visual reveal">
+                <img src="../images/laguna-dorada.webp" alt="Лагуна Дорада" class="split__image" loading="lazy">
+                <div class="split__badge">
+                    <h4 style="font-size:1.5rem; margin-bottom:10px; color:var(--sun);">Соленая лагуна</h4>
+                    <p style="font-size:0.9rem; opacity:0.9;">Уникальная лагуна с белым песком и пляжный клуб с рестораном всего в нескольких шагах от дома.</p>
+                </div>
+            </div>
+            <div class="split__info reveal">
+                <span class="section__tag" style="text-align:left;">Курорт Playa Dorada</span>
+                <h2 class="split__title">Спорт, релакс и карибская атмосфера</h2>
+                <p style="color:var(--text-light); font-size:1.1rem; margin-bottom:30px;">На территории вы найдете первоклассные условия для активного отдыха и заслуженного релакса под пальмами.</p>
+                <div class="tag-cloud">
+                    <span class="tag">🍹 Пляжный клуб и бар</span>
+                    <span class="tag">🌊 Лагуна с соленой водой</span>
+                    <span class="tag">🎢 Аквапарк с горками</span>
+                    <span class="tag">🎾 Теннисные корты</span>
+                    <span class="tag">⚽ Футбольное поле</span>
+                    <span class="tag">🚴 Велодорожки</span>
+                    <span class="tag">🍕 Пиццерия на территории</span>
+                    <span class="tag">💪 Спортзал на территории</span>
+                </div>
+                <div style="margin-top:40px;">
+                    <a href="https://wa.me/420775710301" class="btn btn--primary">МНЕ ИНТЕРЕСЕН ОТДЫХ</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Карта территории (С PlayaDorada.com.pa) -->
+    <section class="section">
+        <div class="section__header reveal">
+            <span class="section__tag">Где вы будете проводить время?</span>
+            <h2 class="section__title">Генплан курорта</h2>
+            <p style="max-width: 800px; margin: 0 auto;">Изучите план всего комплекса. Всего лишь короткая прогулка через тропический сад отделяет вас от моря, лагуны и спортивных площадок.</p>
+        </div>
+        <div class="master-plan-box reveal">
+            <img src="https://www.playadorada.com.pa/wp-content/uploads/2019/11/playa-dorada-panama_04.jpg" alt="Карта курорта Playa Dorada" style="width:100%; border-radius:30px;" loading="lazy">
+        </div>
+    </section>
+
+    <!-- Галерея -->
+    <section class="gallery-section" id="galerie">
+        <div class="section__header reveal">
+            <span class="section__tag">Фотогалерея</span>
+            <h2 class="section__title">Загляните в наш рай</h2>
+            <p class="section__subtitle" style="max-width: 800px; margin: 0 auto; color: var(--text-light);">Посмотрите, что вас ждет – от частного дома до лагуны и пляжного клуба.</p>
+        </div>
+        <div class="gallery-grid reveal">
+            <div class="gallery-item"
+                 onclick="openLightbox(0)"
+                 onkeypress="if(event.key==='Enter')openLightbox(0)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Открыть фото: Вид на лагуну на закате">
+                <img src="../images/1EF539AF-FB3B-4E4E-915C-359FC7AD0821_4_5005_c.webp" alt="Вид на лагуну на закате" loading="lazy">
+            </div>
+            <div class="gallery-item"
+                 onclick="openLightbox(1)"
+                 onkeypress="if(event.key==='Enter')openLightbox(1)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Открыть фото: Тропический сад с пальмами">
+                <img src="../images/20F37BD7-E91F-42C6-86EC-2CF1AC8B25C9_1_105_c.webp" alt="Тропический сад с пальмами" loading="lazy">
+            </div>
+            <div class="gallery-item"
+                 onclick="openLightbox(2)"
+                 onkeypress="if(event.key==='Enter')openLightbox(2)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Открыть фото: Отдых в гамаке">
+                <img src="../images/21277724-043D-48B6-B71A-DF0FC7E6A371_1_105_c.webp" alt="Отдых в гамаке" loading="lazy">
+            </div>
+            <div class="gallery-item"
+                 onclick="openLightbox(3)"
+                 onkeypress="if(event.key==='Enter')openLightbox(3)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Открыть фото: Просторная гостиная">
+                <img src="../images/30183067-FDDE-4763-A0D6-D325CAA47C8D_4_5005_c.webp" alt="Просторная гостиная" loading="lazy">
+            </div>
+            <div class="gallery-item"
+                 onclick="openLightbox(4)"
+                 onkeypress="if(event.key==='Enter')openLightbox(4)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Открыть фото: Свежие кокосы">
+                <img src="../images/37E70D0A-CBB4-4897-8EC5-959E9C4C08C8_1_105_c.webp" alt="Свежие кокосы" loading="lazy">
+            </div>
+            <div class="gallery-item"
+                 onclick="openLightbox(5)"
+                 onkeypress="if(event.key==='Enter')openLightbox(5)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Открыть фото: Современная кухня">
+                <img src="../images/4366304F-9E7E-4E1C-90E5-A07F23792F9D_4_5005_c.webp" alt="Современная кухня" loading="lazy">
+            </div>
+            <div class="gallery-item"
+                 onclick="openLightbox(6)"
+                 onkeypress="if(event.key==='Enter')openLightbox(6)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Открыть фото: Терраса с зоной отдыха">
+                <img src="../images/55375FCB-1E70-4906-80AB-6C7E15D38D2C_1_105_c.webp" alt="Терраса с зоной отдыха" loading="lazy">
+            </div>
+            <div class="gallery-item"
+                 onclick="openLightbox(7)"
+                 onkeypress="if(event.key==='Enter')openLightbox(7)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Открыть фото: Пляж Playa Dorada с белым песком">
+                <img src="../images/6308EFF5-4BF5-4F2F-AA7F-252AADE1F4C2_1_105_c.webp" alt="Пляж Playa Dorada с белым песком" loading="lazy">
+            </div>
+            <div class="gallery-item"
+                 onclick="openLightbox(8)"
+                 onkeypress="if(event.key==='Enter')openLightbox(8)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Открыть фото: Романтический закат">
+                <img src="../images/64A769EC-E9EC-4270-9E3A-338555C339F6_1_105_c.webp" alt="Романтический закат" loading="lazy">
+            </div>
+            <div class="gallery-item"
+                 onclick="openLightbox(9)"
+                 onkeypress="if(event.key==='Enter')openLightbox(9)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Открыть фото: Комфортная спальня">
+                <img src="../images/6829F48B-847A-4990-AEE6-098F5C00F2C2_4_5005_c.webp" alt="Комфортная спальня" loading="lazy">
+            </div>
+            <div class="gallery-item"
+                 onclick="openLightbox(10)"
+                 onkeypress="if(event.key==='Enter')openLightbox(10)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Открыть фото: Дизайнерская ванная комната">
+                <img src="../images/90182751-E96D-4E51-B576-4AEB20DAB9D2_1_105_c.webp" alt="Дизайнерская ванная комната" loading="lazy">
+            </div>
+            <div class="gallery-item"
+                 onclick="openLightbox(11)"
+                 onkeypress="if(event.key==='Enter')openLightbox(11)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Открыть фото: Бассейн для взрослых и детей">
+                <img src="../images/938265AB-E66A-46B9-A88B-321B70690D4E_1_105_c.webp" alt="Бассейн для взрослых и детей" loading="lazy">
+            </div>
+            <div class="gallery-item"
+                 onclick="openLightbox(12)"
+                 onkeypress="if(event.key==='Enter')openLightbox(12)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Открыть фото: Детская площадка на курорте">
+                <img src="../images/942D829D-8752-494B-BD09-A52E2FA2A113_4_5005_c.webp" alt="Детская площадка на курорте" loading="lazy">
+            </div>
+            <div class="gallery-item"
+                 onclick="openLightbox(13)"
+                 onkeypress="if(event.key==='Enter')openLightbox(13)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Открыть фото: Панорамный вид с балкона">
+                <img src="../images/9B7D2B41-C00F-4DD9-8528-82CF09ACFE7B_4_5005_c.webp" alt="Панорамный вид с балкона" loading="lazy">
+            </div>
+            <div class="gallery-item"
+                 onclick="openLightbox(14)"
+                 onkeypress="if(event.key==='Enter')openLightbox(14)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Открыть фото: Цветущая экзотическая флора">
+                <img src="../images/AF7641AC-B047-41AE-B5F6-F64795ECF069_1_105_c.webp" alt="Цветущая экзотическая флора" loading="lazy">
+            </div>
+            <div class="gallery-item"
+                 onclick="openLightbox(15)"
+                 onkeypress="if(event.key==='Enter')openLightbox(15)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Открыть фото: Персональная помощь и услуги">
+                <img src="../images/BDAE9F59-4565-458B-8BF6-1758201C72C5_1_105_c.webp" alt="Персональная помощь и услуги" loading="lazy">
+            </div>
+            <div class="gallery-item"
+                 onclick="openLightbox(16)"
+                 onkeypress="if(event.key==='Enter')openLightbox(16)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Открыть фото: Ночная атмосфера у лагуны">
+                <img src="../images/BEC7CA06-B080-4732-8461-A213BCCCA1BB_1_105_c.webp" alt="Ночная атмосфера у лагуны" loading="lazy">
+            </div>
+            <div class="gallery-item"
+                 onclick="openLightbox(17)"
+                 onkeypress="if(event.key==='Enter')openLightbox(17)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Открыть фото: Дорога к пляжу, усаженная пальмами">
+                <img src="../images/C808459F-729F-4FE9-8AE0-4D08761BAE5F_1_105_c.webp" alt="Дорога к пляжу, усаженная пальмами" loading="lazy">
+            </div>
+            <div class="gallery-item"
+                 onclick="openLightbox(18)"
+                 onkeypress="if(event.key==='Enter')openLightbox(18)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Открыть фото: Местные птицы в саду">
+                <img src="../images/CE617BAB-9A76-494B-9340-DDB90C0BEB83_1_105_c.webp" alt="Местные птицы в саду" loading="lazy">
+            </div>
+            <div class="gallery-item"
+                 onclick="openLightbox(19)"
+                 onkeypress="if(event.key==='Enter')openLightbox(19)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Открыть фото: Общее пространство для гостей">
+                <img src="../images/DDB93ECB-4E5C-43FD-AB98-A7767C984095_4_5005_c.webp" alt="Общее пространство для гостей" loading="lazy">
+            </div>
+            <div class="gallery-item"
+                 onclick="openLightbox(20)"
+                 onkeypress="if(event.key==='Enter')openLightbox(20)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Открыть фото: Вход в дом для отдыха">
+                <img src="../images/F53E8E52-56EE-4001-9DAE-EF78B14EF43C_4_5005_c.webp" alt="Вход в дом для отдыха" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Погода и сезоны -->
+    <section class="section" style="background-color: #fff;">
+        <div class="section__header reveal">
+            <span class="section__tag">Запланируйте дату</span>
+            <h2 class="section__title">Лето, которое не заканчивается</h2>
+        </div>
+        <div class="weather-box reveal">
+            <div class="weather-item">
+                <h4>☀️ Высокий сезон (Январь - Апрель)</h4>
+                <p>Бесконечное солнце и голубое небо. Идеальное время, чтобы сбежать от европейской зимы на райские пляжи Карибского бассейна и Тихого океана.</p>
+            </div>
+            <div style="width:2px; background:rgba(255,255,255,0.1);" class="mobile-hide"></div>
+            <div class="weather-item">
+                <h4>🌿 Зеленый сезон (Май - Декабрь)</h4>
+                <p>Природа самая красивая, все цветет. Дождь идет недолго и освежает, температура остается тропической.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <span class="footer__logo">🌴 Panama Authentic Stay</span>
+        <p style="max-width:600px; margin:0 auto 40px; opacity:0.7;">Ваш чешский гид и хозяин в Панаме. Мы предоставляем жилье и незабываемые впечатления с акцентом на аутентичность.</p>
+        <div style="margin-bottom:40px;">
+            <p style="font-weight:800; font-size:1.2rem; color:var(--sun);">+420 775 710 301</p>
+            <p>PH Residential Playa Dorada, Vacamonte, Panama</p>
+        </div>
+        <p style="opacity:0.3; font-size:0.8rem;">&copy; 2025 Panama Authentic Stay. Все права защищены.</p>
+    </footer>
+
+    <!-- Модальные окна -->
+    <div id="modal-villa" class="modal">
+        <div class="modal__content">
+            <button class="modal__close" onclick="closeModal('modal-villa')">&times;</button>
+            <div class="modal__grid">
+                <img src="https://www.playadorada.com.pa/wp-content/uploads/2019/10/Imagen-aspiracional-scaled.jpg" class="modal__image" alt="Дом для отдыха" loading="lazy">
+                <div class="modal__details">
+                    <h2 class="modal__title">Проживание в уединении</h2>
+                    <p>Арендуйте наш дом и наслаждайтесь свободой, которую не предлагает отель. Тишина, уединение и полный комфорт для вашей семьи.</p>
+                    <ul class="modal__list">
+                        <li>3 спальни с кондиционером и современная кухня</li>
+                        <li>Высокоскоростной WiFi для цифровых кочевников</li>
+                        <li>Доступ ко всему курорту (лагуна, бассейны) включен</li>
+                        <li>Охраняемая территория 24/7 (максимальная безопасность)</li>
+                        <li>Торговые центры Westland и Extra всего в 5 минутах от комплекса</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-service" class="modal">
+        <div class="modal__content">
+            <button class="modal__close" onclick="closeModal('modal-service')">&times;</button>
+            <div class="modal__grid">
+                <img src="../images/BDAE9F59-4565-458B-8BF6-1758201C72C5_1_105_c.webp" class="modal__image" alt="Услуги для отдыха" loading="lazy">
+                <div class="modal__details">
+                    <h2 class="modal__title">Полный сервис</h2>
+                    <p>Мы не хотим, чтобы вы беспокоились о логистике. Мы хотим, чтобы вы наслаждались отдыхом с первой минуты.</p>
+                    <ul class="modal__list">
+                        <li><strong>Трансфер из аэропорта:</strong> Личная встреча в аэропорту Токумен.</li>
+                        <li><strong>Водитель:</strong> Услуги личного водителя для покупок или конкретных поездок.</li>
+                        <li><strong>SIM-карта:</strong> Мы передадим вам активированную SIM-карту с данными сразу по прибытии.</li>
+                        <li><strong>Связь:</strong> Постоянная поддержка через WhatsApp.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-tours" class="modal">
+        <div class="modal__content">
+            <button class="modal__close" onclick="closeModal('modal-tours')">&times;</button>
+            <div class="modal__grid">
+                <img src="https://www.playadorada.com.pa/wp-content/uploads/2019/10/playa-dorada_vista-family.jpg" class="modal__image" alt="Экскурсии по Панаме" loading="lazy">
+                <div class="modal__details">
+                    <h2 class="modal__title">Частные экспедиции</h2>
+                    <p>Мы покажем вам лучшее из Панамы без толп туристов:</p>
+                    <ul class="modal__list" style="margin-top: 20px;">
+                        <li><strong>Сан-Блас:</strong> Частная поездка на карибские острова индейцев Гуна.</li>
+                        <li><strong>Панамский канал:</strong> Шлюзы Мирафлорес и старый город Каско-Вьехо.</li>
+                        <li><strong>Эль-Валье-де-Антон:</strong> Поход в кратер вулкана и посещение рынка.</li>
+                        <li><strong>Исла-Табога:</strong> Полный день отдыха на "Острове цветов" всего в одной поездке на лодке.</li>
+                    </ul>
+                    <a href="https://wa.me/420775710301" class="btn btn--primary" style="margin-top:20px;">Я ХОЧУ ЗАПЛАНИРОВАТЬ ПОЕЗДКУ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox Галерея Модальное окно -->
+    <div id="lightbox" class="lightbox" role="dialog" aria-label="Галерея" aria-modal="true" tabindex="-1">
+        <button class="lightbox__close" aria-label="Закрыть">&times;</button>
+        <button class="lightbox__nav lightbox__nav--prev" aria-label="Назад">&lt;</button>
+        <div class="lightbox__content">
+            <img id="lightbox-img" src="" alt="Деталь" loading="eager">
+        </div>
+        <button class="lightbox__nav lightbox__nav--next" aria-label="Вперед">&gt;</button>
+    </div>
+
+    <!-- WhatsApp Плавающая кнопка -->
+    <div class="wa-float">
+        <div style="background:white; padding:10px 20px; border-radius:15px; box-shadow:0 10px 20px rgba(0,0,0,0.1); font-weight:800; color:var(--primary);">Давайте спланируем отпуск! 🥥</div>
+        <a href="https://wa.me/420775710301" class="wa-btn" target="_blank">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+    </div>
+
+    <script>window.imgPrefix = '../';</script>
+    <script src="../script.js"></script>
+</body>
+</html>

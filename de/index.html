@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Panama Authentic Stay - Exklusive Ferienunterkunft im Resort PH Playa Dorada. Erleben Sie die Karibik in Privatsphäre mit europäischem Service.">
+    <meta name="author" content="Panama Authentic Stay">
+
+    <!-- Open Graph für soziale Netzwerke -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Panama Authentic Stay | Ihr Traumurlaub in Panama">
+    <meta property="og:description" content="Vermietung eines Privathauses direkt am Strand. Lagune, Beach Club und Ausflüge in Panama.">
+    <meta property="og:image" content="https://www.playadorada.com.pa/wp-content/uploads/2024/01/DJI_0906.jpg">
+
+    <title>Panama Authentic Stay | Urlaub im Karibischen Paradies</title>
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌴</text></svg>">
+
+    <!-- Moderne Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav" id="navbar">
+        <a href="#" class="nav__logo">🌴 Panama Authentic</a>
+        <a href="https://wa.me/420775710301" class="btn btn--primary" style="padding: 12px 25px; font-size: 0.8rem;">URLAUB BUCHEN</a>
+    </nav>
+
+    <!-- Hero Sektion -->
+    <section class="hero">
+        <div class="hero__bg" id="hero-bg"></div>
+        <div class="hero__content">
+            <span class="hero__tag">Urlaub direkt am Pazifikstrand</span>
+            <h1 class="hero__title">Entdecken Sie das Paradies in Playa Dorada</h1>
+            <p class="hero__subtitle">Vermietung eines privaten Familienhauses in einem prestigeträchtigen Resort. 1 km Privatstrand, einzigartige Lagune und erstklassiger Service nur 30 Minuten von Panama City entfernt.</p>
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <a href="#nabidka" class="btn btn--primary">Unterkunftsangebot</a>
+                <a href="#lokalita" class="btn btn--outline">Resort und Lagune</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hauptpfeiler des Angebots -->
+    <section class="section" id="nabidka">
+        <div class="section__header reveal">
+            <span class="section__tag">Warum Urlaub bei uns genießen?</span>
+            <h2 class="section__title">Mehr als nur ein Ferienhaus</h2>
+        </div>
+        <div class="cards-grid">
+            <article class="card reveal" onclick="openModal('modal-villa')">
+                <span class="card__icon">🏘️</span>
+                <h3 class="card__title">Ihr Ferienhaus</h3>
+                <p class="card__text">Voll ausgestattetes Haus in einer bewachten Gemeinschaft. Private Terrasse, Grill und Sicherheit für Ihre Familie während des gesamten Aufenthalts.</p>
+                <span style="color:var(--accent); font-weight:800; display:block; margin-top:20px;">HAUSAUSSTATTUNG &rarr;</span>
+            </article>
+            <article class="card reveal" onclick="openModal('modal-service')">
+                <span class="card__icon">🚐</span>
+                <h3 class="card__title">Sorgenfreier Service</h3>
+                <p class="card__text">Flughafentransfer, persönlicher Fahrer für Ausflüge und SIM-Karte. Sie genießen einfach, wir kümmern uns um die Details.</p>
+                <span style="color:var(--accent); font-weight:800; display:block; margin-top:20px;">UNSERE DIENSTLEISTUNGEN &rarr;</span>
+            </article>
+            <article class="card reveal" onclick="openModal('modal-tours')">
+                <span class="card__icon">🛶</span>
+                <h3 class="card__title">Private Ausflüge</h3>
+                <p class="card__text">Expeditionen nach San Blas, zum Kanal oder in den Dschungel. Sie lernen Panama authentisch und sicher kennen.</p>
+                <span style="color:var(--accent); font-weight:800; display:block; margin-top:20px;">AUSFLUGSPLAN &rarr;</span>
+            </article>
+        </div>
+    </section>
+
+    <!-- Resort und Lage -->
+    <section class="section" id="lokalita" style="background-color: #fff;">
+        <div class="split">
+            <div class="split__visual reveal">
+                <img src="../images/laguna-dorada.webp" alt="Laguna Dorada" class="split__image" loading="lazy">
+                <div class="split__badge">
+                    <h4 style="font-size:1.5rem; margin-bottom:10px; color:var(--sun);">Salzwasserlagune</h4>
+                    <p style="font-size:0.9rem; opacity:0.9;">Einzigartige Lagune mit weißem Sand und Beach Club mit Restaurant nur wenige Schritte vom Haus entfernt.</p>
+                </div>
+            </div>
+            <div class="split__info reveal">
+                <span class="section__tag" style="text-align:left;">Resort Playa Dorada</span>
+                <h2 class="split__title">Sport, Relax und karibisches Flair</h2>
+                <p style="color:var(--text-light); font-size:1.1rem; margin-bottom:30px;">Im Areal finden Sie erstklassige Einrichtungen für einen aktiven Urlaub sowie verdiente Entspannung unter Palmen.</p>
+                <div class="tag-cloud">
+                    <span class="tag">🍹 Beach Club & Bar</span>
+                    <span class="tag">🌊 Salzwasserlagune</span>
+                    <span class="tag">🎢 Aquapark mit Rutschen</span>
+                    <span class="tag">🎾 Tennisplätze</span>
+                    <span class="tag">⚽ Fußballplatz</span>
+                    <span class="tag">🚴 Radwege</span>
+                    <span class="tag">🍕 Pizzeria im Areal</span>
+                    <span class="tag">💪 Fitnessstudio im Areal</span>
+                </div>
+                <div style="margin-top:40px;">
+                    <a href="https://wa.me/420775710301" class="btn btn--primary">ICH HABE INTERESSE AM AUFENTHALT</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Karte des Areals (Von PlayaDorada.com.pa) -->
+    <section class="section">
+        <div class="section__header reveal">
+            <span class="section__tag">Wo werden Sie Ihre Zeit verbringen?</span>
+            <h2 class="section__title">Resort Master Plan</h2>
+            <p style="max-width: 800px; margin: 0 auto;">Erkunden Sie die Aufteilung des gesamten Areals. Nur ein kurzer Spaziergang durch den tropischen Garten trennt Sie vom Meer, der Lagune und den Sportanlagen.</p>
+        </div>
+        <div class="master-plan-box reveal">
+            <img src="https://www.playadorada.com.pa/wp-content/uploads/2019/11/playa-dorada-panama_04.jpg" alt="Karte des Resorts Playa Dorada" style="width:100%; border-radius:30px;" loading="lazy">
+        </div>
+    </section>
+
+    <!-- Galerie -->
+    <section class="gallery-section" id="galerie">
+        <div class="section__header reveal">
+            <span class="section__tag">Fotogalerie</span>
+            <h2 class="section__title">Ein Blick in unser Paradies</h2>
+            <p class="section__subtitle" style="max-width: 800px; margin: 0 auto; color: var(--text-light);">Sehen Sie, was Sie erwartet – vom Privathaus über die Lagune bis zum Beach Club.</p>
+        </div>
+        <div class="gallery-grid reveal">
+            <div class="gallery-item"
+                 onclick="openLightbox(0)"
+                 onkeypress="if(event.key==='Enter')openLightbox(0)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Foto öffnen: Blick auf die Lagune bei Sonnenuntergang">
+                <img src="../images/1EF539AF-FB3B-4E4E-915C-359FC7AD0821_4_5005_c.webp" alt="Blick auf die Lagune bei Sonnenuntergang" loading="lazy">
+            </div>
+            <div class="gallery-item"
+                 onclick="openLightbox(1)"
+                 onkeypress="if(event.key==='Enter')openLightbox(1)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Foto öffnen: Tropischer Garten mit Palmen">
+                <img src="../images/20F37BD7-E91F-42C6-86EC-2CF1AC8B25C9_1_105_c.webp" alt="Tropischer Garten mit Palmen" loading="lazy">
+            </div>
+            <div class="gallery-item"
+                 onclick="openLightbox(2)"
+                 onkeypress="if(event.key==='Enter')openLightbox(2)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Foto öffnen: Entspannung in der Hängematte">
+                <img src="../images/21277724-043D-48B6-B71A-DF0FC7E6A371_1_105_c.webp" alt="Entspannung in der Hängematte" loading="lazy">
+            </div>
+            <div class="gallery-item"
+                 onclick="openLightbox(3)"
+                 onkeypress="if(event.key==='Enter')openLightbox(3)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Foto öffnen: Geräumiges Wohnzimmer">
+                <img src="../images/30183067-FDDE-4763-A0D6-D325CAA47C8D_4_5005_c.webp" alt="Geräumiges Wohnzimmer" loading="lazy">
+            </div>
+            <div class="gallery-item"
+                 onclick="openLightbox(4)"
+                 onkeypress="if(event.key==='Enter')openLightbox(4)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Foto öffnen: Frische Kokosnüsse">
+                <img src="../images/37E70D0A-CBB4-4897-8EC5-959E9C4C08C8_1_105_c.webp" alt="Frische Kokosnüsse" loading="lazy">
+            </div>
+            <div class="gallery-item"
+                 onclick="openLightbox(5)"
+                 onkeypress="if(event.key==='Enter')openLightbox(5)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Foto öffnen: Moderne Küchenzeile">
+                <img src="../images/4366304F-9E7E-4E1C-90E5-A07F23792F9D_4_5005_c.webp" alt="Moderne Küchenzeile" loading="lazy">
+            </div>
+            <div class="gallery-item"
+                 onclick="openLightbox(6)"
+                 onkeypress="if(event.key==='Enter')openLightbox(6)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Foto öffnen: Terrasse mit Sitzgelegenheit">
+                <img src="../images/55375FCB-1E70-4906-80AB-6C7E15D38D2C_1_105_c.webp" alt="Terrasse mit Sitzgelegenheit" loading="lazy">
+            </div>
+            <div class="gallery-item"
+                 onclick="openLightbox(7)"
+                 onkeypress="if(event.key==='Enter')openLightbox(7)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Foto öffnen: Strand Playa Dorada mit weißem Sand">
+                <img src="../images/6308EFF5-4BF5-4F2F-AA7F-252AADE1F4C2_1_105_c.webp" alt="Strand Playa Dorada mit weißem Sand" loading="lazy">
+            </div>
+            <div class="gallery-item"
+                 onclick="openLightbox(8)"
+                 onkeypress="if(event.key==='Enter')openLightbox(8)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Foto öffnen: Romantischer Sonnenuntergang">
+                <img src="../images/64A769EC-E9EC-4270-9E3A-338555C339F6_1_105_c.webp" alt="Romantischer Sonnenuntergang" loading="lazy">
+            </div>
+            <div class="gallery-item"
+                 onclick="openLightbox(9)"
+                 onkeypress="if(event.key==='Enter')openLightbox(9)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Foto öffnen: Komfortables Schlafzimmer">
+                <img src="../images/6829F48B-847A-4990-AEE6-098F5C00F2C2_4_5005_c.webp" alt="Komfortables Schlafzimmer" loading="lazy">
+            </div>
+            <div class="gallery-item"
+                 onclick="openLightbox(10)"
+                 onkeypress="if(event.key==='Enter')openLightbox(10)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Foto öffnen: Design-Badezimmer">
+                <img src="../images/90182751-E96D-4E51-B576-4AEB20DAB9D2_1_105_c.webp" alt="Design-Badezimmer" loading="lazy">
+            </div>
+            <div class="gallery-item"
+                 onclick="openLightbox(11)"
+                 onkeypress="if(event.key==='Enter')openLightbox(11)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Foto öffnen: Pool für Erwachsene und Kinder">
+                <img src="../images/938265AB-E66A-46B9-A88B-321B70690D4E_1_105_c.webp" alt="Pool für Erwachsene und Kinder" loading="lazy">
+            </div>
+            <div class="gallery-item"
+                 onclick="openLightbox(12)"
+                 onkeypress="if(event.key==='Enter')openLightbox(12)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Foto öffnen: Spielplatz im Resort">
+                <img src="../images/942D829D-8752-494B-BD09-A52E2FA2A113_4_5005_c.webp" alt="Spielplatz im Resort" loading="lazy">
+            </div>
+            <div class="gallery-item"
+                 onclick="openLightbox(13)"
+                 onkeypress="if(event.key==='Enter')openLightbox(13)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Foto öffnen: Panoramablick vom Balkon">
+                <img src="../images/9B7D2B41-C00F-4DD9-8528-82CF09ACFE7B_4_5005_c.webp" alt="Panoramablick vom Balkon" loading="lazy">
+            </div>
+            <div class="gallery-item"
+                 onclick="openLightbox(14)"
+                 onkeypress="if(event.key==='Enter')openLightbox(14)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Foto öffnen: Blühende exotische Flora">
+                <img src="../images/AF7641AC-B047-41AE-B5F6-F64795ECF069_1_105_c.webp" alt="Blühende exotische Flora" loading="lazy">
+            </div>
+            <div class="gallery-item"
+                 onclick="openLightbox(15)"
+                 onkeypress="if(event.key==='Enter')openLightbox(15)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Foto öffnen: Persönliche Assistenz und Service">
+                <img src="../images/BDAE9F59-4565-458B-8BF6-1758201C72C5_1_105_c.webp" alt="Persönliche Assistenz und Service" loading="lazy">
+            </div>
+            <div class="gallery-item"
+                 onclick="openLightbox(16)"
+                 onkeypress="if(event.key==='Enter')openLightbox(16)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Foto öffnen: Nachtatmosphäre an der Lagune">
+                <img src="../images/BEC7CA06-B080-4732-8461-A213BCCCA1BB_1_105_c.webp" alt="Nachtatmosphäre an der Lagune" loading="lazy">
+            </div>
+            <div class="gallery-item"
+                 onclick="openLightbox(17)"
+                 onkeypress="if(event.key==='Enter')openLightbox(17)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Foto öffnen: Weg zum Strand gesäumt von Palmen">
+                <img src="../images/C808459F-729F-4FE9-8AE0-4D08761BAE5F_1_105_c.webp" alt="Weg zum Strand gesäumt von Palmen" loading="lazy">
+            </div>
+            <div class="gallery-item"
+                 onclick="openLightbox(18)"
+                 onkeypress="if(event.key==='Enter')openLightbox(18)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Foto öffnen: Heimische Vögel im Garten">
+                <img src="../images/CE617BAB-9A76-494B-9340-DDB90C0BEB83_1_105_c.webp" alt="Heimische Vögel im Garten" loading="lazy">
+            </div>
+            <div class="gallery-item"
+                 onclick="openLightbox(19)"
+                 onkeypress="if(event.key==='Enter')openLightbox(19)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Foto öffnen: Gemeinschaftsraum für Gäste">
+                <img src="../images/DDB93ECB-4E5C-43FD-AB98-A7767C984095_4_5005_c.webp" alt="Gemeinschaftsraum für Gäste" loading="lazy">
+            </div>
+            <div class="gallery-item"
+                 onclick="openLightbox(20)"
+                 onkeypress="if(event.key==='Enter')openLightbox(20)"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Foto öffnen: Eingang zum Ferienhaus">
+                <img src="../images/F53E8E52-56EE-4001-9DAE-EF78B14EF43C_4_5005_c.webp" alt="Eingang zum Ferienhaus" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Wetter und Saison -->
+    <section class="section" style="background-color: #fff;">
+        <div class="section__header reveal">
+            <span class="section__tag">Planen Sie Ihren Termin</span>
+            <h2 class="section__title">Sommer, der nie endet</h2>
+        </div>
+        <div class="weather-box reveal">
+            <div class="weather-item">
+                <h4>☀️ Hauptsaison (Januar - April)</h4>
+                <p>Endlose Sonne und blauer Himmel. Die ideale Zeit, um dem europäischen Winter an die paradiesischen Strände der Karibik und des Pazifiks zu entfliehen.</p>
+            </div>
+            <div style="width:2px; background:rgba(255,255,255,0.1);" class="mobile-hide"></div>
+            <div class="weather-item">
+                <h4>🌿 Grüne Saison (Mai - Dezember)</h4>
+                <p>Die Natur ist am schönsten, alles blüht. Es regnet nur kurz und erfrischend, die Temperaturen bleiben tropisch.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <span class="footer__logo">🌴 Panama Authentic Stay</span>
+        <p style="max-width:600px; margin:0 auto 40px; opacity:0.7;">Ihr Reiseführer und Gastgeber in Panama. Wir bieten Unterkunft und unvergessliche Erlebnisse mit Schwerpunkt auf Authentizität.</p>
+        <div style="margin-bottom:40px;">
+            <p style="font-weight:800; font-size:1.2rem; color:var(--sun);">+420 775 710 301</p>
+            <p>PH Residential Playa Dorada, Vacamonte, Panama</p>
+        </div>
+        <p style="opacity:0.3; font-size:0.8rem;">&copy; 2025 Panama Authentic Stay. Alle Rechte vorbehalten.</p>
+    </footer>
+
+    <!-- Modals -->
+    <div id="modal-villa" class="modal">
+        <div class="modal__content">
+            <button class="modal__close" onclick="closeModal('modal-villa')">&times;</button>
+            <div class="modal__grid">
+                <img src="https://www.playadorada.com.pa/wp-content/uploads/2019/10/Imagen-aspiracional-scaled.jpg" class="modal__image" alt="Ferienhaus" loading="lazy">
+                <div class="modal__details">
+                    <h2 class="modal__title">Unterkunft in Privatsphäre</h2>
+                    <p>Mieten Sie unser Haus und genießen Sie die Freiheit, die ein Hotel nicht bietet. Ruhe, Privatsphäre und jeglicher Komfort für Ihre Familie.</p>
+                    <ul class="modal__list">
+                        <li>3 klimatisierte Schlafzimmer und moderne Küche</li>
+                        <li>High-Speed-WLAN für digitale Nomaden</li>
+                        <li>Zugang zum gesamten Resort (Lagune, Pools) inbegriffen</li>
+                        <li>Bewachtes Areal 24/7 (maximale Sicherheit)</li>
+                        <li>Einkaufszentren Westland und Extra nur 5 Min vom Areal entfernt</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-service" class="modal">
+        <div class="modal__content">
+            <button class="modal__close" onclick="closeModal('modal-service')">&times;</button>
+            <div class="modal__grid">
+                <img src="../images/BDAE9F59-4565-458B-8BF6-1758201C72C5_1_105_c.webp" class="modal__image" alt="Urlaubsservice" loading="lazy">
+                <div class="modal__details">
+                    <h2 class="modal__title">Komplettservice</h2>
+                    <p>Wir möchten nicht, dass Sie sich um Logistik kümmern müssen. Wir möchten, dass Sie Ihren Urlaub von der ersten Minute an genießen.</p>
+                    <ul class="modal__list">
+                        <li><strong>Flughafentransfer:</strong> Persönliche Abholung am Flughafen Tocumen.</li>
+                        <li><strong>Fahrer:</strong> Persönliche Fahrerdienste für Einkäufe oder spezifische Fahrten.</li>
+                        <li><strong>SIM-Karte:</strong> Wir übergeben Ihnen direkt nach der Ankunft eine aktivierte SIM-Karte mit Datenvolumen.</li>
+                        <li><strong>Konnektivität:</strong> Ständige Unterstützung über WhatsApp.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-tours" class="modal">
+        <div class="modal__content">
+            <button class="modal__close" onclick="closeModal('modal-tours')">&times;</button>
+            <div class="modal__grid">
+                <img src="https://www.playadorada.com.pa/wp-content/uploads/2019/10/playa-dorada_vista-family.jpg" class="modal__image" alt="Ausflüge in Panama" loading="lazy">
+                <div class="modal__details">
+                    <h2 class="modal__title">Private Expeditionen</h2>
+                    <p>Wir zeigen Ihnen das Beste von Panama ohne Touristenmassen:</p>
+                    <ul class="modal__list" style="margin-top: 20px;">
+                        <li><strong>San Blas:</strong> Privatreise zu den Karibikinseln der Guna-Indianer.</li>
+                        <li><strong>Panamakanal:</strong> Miraflores-Schleusen und Altstadt Casco Viejo.</li>
+                        <li><strong>El Valle de Antón:</strong> Wanderung im Vulkankrater und Marktbesuch.</li>
+                        <li><strong>Isla Taboga:</strong> Ganztägige Entspannung auf der "Blumeninsel" nur eine Bootsfahrt entfernt.</li>
+                    </ul>
+                    <a href="https://wa.me/420775710301" class="btn btn--primary" style="margin-top:20px;">ICH MÖCHTE EINEN AUSFLUG PLANEN</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox Galerie Modal -->
+    <div id="lightbox" class="lightbox" role="dialog" aria-label="Galerie" aria-modal="true" tabindex="-1">
+        <button class="lightbox__close" aria-label="Schließen">&times;</button>
+        <button class="lightbox__nav lightbox__nav--prev" aria-label="Zurück">&lt;</button>
+        <div class="lightbox__content">
+            <img id="lightbox-img" src="" alt="Detail" loading="eager">
+        </div>
+        <button class="lightbox__nav lightbox__nav--next" aria-label="Weiter">&gt;</button>
+    </div>
+
+    <!-- WhatsApp Schwebender Button -->
+    <div class="wa-float">
+        <div style="background:white; padding:10px 20px; border-radius:15px; box-shadow:0 10px 20px rgba(0,0,0,0.1); font-weight:800; color:var(--primary);">Lassen Sie uns den Urlaub planen! 🥥</div>
+        <a href="https://wa.me/420775710301" class="wa-btn" target="_blank">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+    </div>
+
+    <script>window.imgPrefix = '../';</script>
+    <script src="../script.js"></script>
+</body>
+</html>
